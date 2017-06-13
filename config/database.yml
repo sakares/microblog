@@ -12,15 +12,17 @@ default: &default
 development:
   <<: *default
   database: dfnr8p4md2pupc
-  adapter: postgresql
   host: ec2-107-20-226-93.compute-1.amazonaws.com
+  username: <%= ENV['RAILS_DB_USR'] %>
+  password: <%= ENV['RAILS_DB_PWD'] %>
 
 
 staging:
   <<: *default
   database: dfnr8p4md2pupc
-  adapter: postgresql
   host: ec2-107-20-226-93.compute-1.amazonaws.com
+  username: <%= ENV['RAILS_DB_USR'] %>
+  password: <%= ENV['RAILS_DB_PWD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
