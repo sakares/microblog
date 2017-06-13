@@ -13,23 +13,26 @@ development:
   <<: *default
   database: dfnr8p4md2pupc
   host: ec2-107-20-226-93.compute-1.amazonaws.com
-  username: <%= ENV['RAILS_DB_USR'] %>
-  password: <%= ENV['RAILS_DB_PWD'] %>
+  username: <%= ENV['RAILS_DB_STAGING_USR'] %>
+  password: <%= ENV['RAILS_DB_STAGING_PWD'] %>
 
 
 staging:
   <<: *default
   database: dfnr8p4md2pupc
   host: ec2-107-20-226-93.compute-1.amazonaws.com
-  username: <%= ENV['RAILS_DB_USR'] %>
-  password: <%= ENV['RAILS_DB_PWD'] %>
+  username: <%= ENV['RAILS_DB_STAGING_USR'] %>
+  password: <%= ENV['RAILS_DB_STAGING_PWD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-#test:
-#  <<: *default
-#  database: db/test.sqlite3
+test:
+  <<: *default
+  database: desmv2stcolfqp
+  host: ec2-23-21-220-48.compute-1.amazonaws.com
+  username: <%= ENV['RAILS_DB_TEST_USR'] %>
+  password: <%= ENV['RAILS_DB_TEST_PWD'] %>
 
 #production:
 #  <<: *default
