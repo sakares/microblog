@@ -10,11 +10,13 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
+    @category_name = Category.where(id: @content.category_id)[0][:name]
   end
 
   # GET /contents/new
   def new
     @content = Content.new
+    @category = Category.all
   end
 
   # GET /contents/1/edit
@@ -69,6 +71,6 @@ class ContentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def content_params
-      params.require(:content).permit(:title, :description)
+      params.require(:content).permit(:title, :description, :category_id)
     end
 end
