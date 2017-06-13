@@ -1,11 +1,11 @@
 # README
 
+[![Build Status](https://travis-ci.org/sakares/microblog.svg?branch=master)](https://travis-ci.org/sakares/microblog)
+
 To-Do list:
 
-* view cache?
+* Travis CI ?
 
-* add test scenario
+* listing category and content menu on the top
 
-* any unit test?
-
-* need CI ?
+* add test scenario, RSpec?
