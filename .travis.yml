@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.2.0
+  - 2.4.0p0
 
 #addons:
 #  firefox: "38.0.5" # Set Firefox Version if needed.
@@ -19,6 +19,7 @@ before_install:
 
 install:
   - gem install rails
+  - gem install rake
 
 script:
   - bin/rake db:migrate RAILS_ENV=test
