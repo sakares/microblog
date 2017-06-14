@@ -4,6 +4,8 @@
 
 To-Do list:
 
+* Travis CI ?
+
 * listing category and content menu on the top
 
 * add test scenario, RSpec?
