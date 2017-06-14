@@ -2,10 +2,6 @@
 
 To-Do list:
 
-* view cache?
+* category and contents menu
 
-* add test scenario
-
-* any unit test?
-
-* need CI ?
+* more test scenario
