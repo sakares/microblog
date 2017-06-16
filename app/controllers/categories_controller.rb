@@ -61,6 +61,11 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def listing
+    @category_name = Category.where(id: params[:id]).first.name
+    @content_list = Content.where(category_id: params[:id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
+<div id="menu-list">
+  <h4>Menu: </h4>
+  <h4><a href="/contents">content list</a></h4>
+</div>
+
+<h1>Categories List</h1>
 
 <table>
   <thead>
@@ -16,9 +21,10 @@
       <tr>
         <td><%= category.name %></td>
         <td><%= category.description %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a href="categories/listing/<%= category.id %>">list</a></td>
+        <td><%= link_to 'view', category %></td>
+        <td><%= link_to 'edit', edit_category_path(category) %></td>
+        <td><%= link_to 'delete', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Category', new_category_path %>
+<%= link_to 'Create new category', new_category_path %>

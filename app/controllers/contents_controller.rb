@@ -4,7 +4,14 @@ class ContentsController < ApplicationController
   # GET /contents
   # GET /contents.json
   def index
-    @contents = Content.all
+    @contents = Content.find_by_sql('SELECT contents.id,
+                                    contents.title,
+                                    contents.description,
+                                    categories.id as category_id,
+                                    categories.name as content_category
+                                    FROM contents
+                                    INNER JOIN categories
+                                    ON contents.category_id = categories.id')
   end
 
   # GET /contents/1
